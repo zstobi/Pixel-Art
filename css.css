@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #ebe7e7;
+    /* border: 1px solid red; */
+    /* hacer lo del border con un OUTLINE deberia mostrar el tamano real */
+}
+
+body {
+    height: 100vh;
+    background-color: #0b1022;    
+}
+
+/* DISENO DE PAGINA */
+
+.page {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(10,1fr);
+}
+
+/* DISENO DE TITLE */
+
+.title {
+    grid-row: 1/2;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 0.5fr 1fr;
+}
+h3 {
+    color: #ebe7e750;
+}
+
+/* DISENO DEL MAIN */
+
+.general {
+    background-color: #2b231f;
+    height: 97%;
+    width: 90%;
+    grid-row: 2/10;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(9,1fr);
+    border-radius: 10px;
+}
+
+/* DISENO DEL DIBUJO */
+
+.dibujo {
+    grid-column: 2/9;
+    grid-row: 1/10;
+
+    --alto: ;
+    --ancho: ;
+
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    display: grid;
+    grid-template-rows: repeat(var(--alto),1fr);
+    grid-template-columns: repeat(var(--ancho),1fr);
+    gap: 1px;
+}
+.pixel {
+    cursor: pointer;
+    background-color: #201f1e;
+}
+
+/* DISENO DEL ASIDE */
+
+aside {
+    grid-column: 1/2;
+    grid-row: 1/10;
+    display: grid;
+    grid-template-rows: repeat(11,1fr);
+}
+.aa {
+    cursor: pointer;
+}
+.bb {
+    height: 75%;
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+}
+.size {
+    height: 100%;
+    width: 100%;
+    grid-row: 1/4;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,1fr);
+    background-color: #2b231f;
+    border-top-left-radius: 10px;
+}
+.h {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+.h2 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.w {
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+.w2 {
+    grid-column: 1/3;
+    grid-row: 4/5;
+}
+.reset {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
+      -3px -3px 10px #2b231f;
+    background-color: #2e3a41;
+    color: #440000;
+    transition: 0.2s;
+}
+.reset:hover{
+    animation: shake 200ms;
+    color: #f00;
+}
+.reset:active{
+    box-shadow: none;
+    background-color: #f00;
+    color: #ff0;
+}
+.confirm {
+    grid-column: 2/3;
+    grid-row: 5/6;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
+      -3px -3px 10px #2b231f;
+    background-color: #2e3a41;
+    color: #009;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.confirm:hover {
+    color: #0000df;
+}
+.confirm:active{
+    box-shadow: none;
+    background-color: #009;
+    color: #b88d00;
+    transform: translateY(2px);
+}
+.inputs-aside {
+    height: 60%;
+    width: 40%;
+    text-align: center;
+    background-color: #2e3a41;
+    border: none;
+    border-radius: 4px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+}
+::placeholder {
+    color: #585858;
+}
+
+.btns {
+    grid-row: 4/12;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(9,1fr);
+    background-color: #2b231f;
+    border-bottom-left-radius: 10px;
+    border-top: 2px solid #0b1022;
+}
+.btns-uno {
+    height: 100%;
+    width: 100%;
+    grid-row: 1/3;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);    
+}
+.lc {
+    grid-row: 1;
+    grid-column: 1/3;
+    font-weight: 600;
+    background: -webkit-linear-gradient(360deg,#f00,#090,#009);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.resetgrid {
+    grid-column: 1/3;
+    grid-row: 7;
+}
+.resetgrid:hover {
+    animation: shake 200ms;
+}
+.resetgrid:active{
+    background-color: #f00;
+    color: #ff0;    
+}
+.save {
+    grid-column: 3/5;
+    grid-row: 7;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5),
+      -3px -3px 10px #2b231f;
+    font-weight: 600;
+    background-color: #2e3a41;
+    color: #157c01;
+    transition: 0.2s;
+}
+.save:hover {
+    color: #20be00;
+}
+.save:active{
+    box-shadow: none;
+    background-color: #090;
+    color: #ff0;
+    transform: translateY(2px);
+}
+.btn-color{
+    height: 45%;
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+}
+.ccc {
+    background-color: #2e3a41;
+}
+.black {
+    font-weight: 600;
+    color: #000;
+}
+.white {
+    font-weight: 500;
+    color: #fff;
+}
+.transparent {
+    font-weight: 500;
+    color: inherit;
+}
+.transparent:active,.transparent:focus,.nogrid:active,.nogrid:focus {
+    color: #b88d00;
+    border: 1px solid #fff;
+}
+
+.colores {
+    grid-row: 3/10;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(7,1fr);
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+}
+.color-inputs {
+    height: 55%;
+    width: 60%;
+    border: none;
+    outline: none;
+    background: none;
+}
+input::-webkit-color-swatch {
+	border: none;
+    border-radius: 100px;
+}
+
+.botonColor {
+    height: 50%;
+    width: 75%;
+    border: 1px dotted #fff;
+    outline: none;
+    border-radius: 4px;
+    background-color: #000;
+    cursor: pointer;
+}
+
+/* DISENO DEL FOOTER */
+
+footer {
+    grid-row: 10/11;
+    color: #ebe7e7;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20%;
+}
+
+/* ANIMACIONES */
+
+@keyframes shake {
+    25% { transform: translateX(2px); }
+    50% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+/* QUEDARIA ALGUNOS EFECTOS ON ACTIVE Y CAPAZ MODIFICAR LOS COLORES */
+/* HACERLO RESPONSIVE DESIGN */

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pixel Art tester</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatcolor-inputs.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="page">
+            <div class="title">
+                <h3>little</h3><h1>Pixel Art tester</h1>
+            </div>
+            <main class="general">
+                <section class="dibujo">
+                </section>
+                <aside>
+                    <div class="size">
+                        <label class="botones-aside h">height</label>
+                        <input class="inputs-aside h2" type="number" placeholder="max 90">
+                        <label class="botones-aside w">width</label>
+                        <input class="inputs-aside w2" type="number" placeholder="max 165">
+                        <button onclick="reset()" class="aa bb reset">reset</button>
+                        <button onclick="grillado(height.value,width.value)" class="aa bb confirm">confirm</button>
+                    </div>
+                    <section class="btns">
+                        <div class="btns-uno">
+                            <label class="lc">color palette</label>
+                            <button class="aa btn-color ccc transparent">clean</button>
+                            <button class="aa btn-color ccc nogrid">no grid</button>
+                        </div>
+                        <div class="colores">
+                            <input id="a1" class="aa color-inputs" type="color">
+                            <button id="a2" class="botonColor"></button>
+                            <input id="a3" class="aa color-inputs" type="color">
+                            <button id="a4" class="botonColor"></button>
+                            <input id="a5" class="aa color-inputs" type="color">
+                            <button id="a6" class="botonColor"></button>
+                            <input id="a7" class="aa color-inputs" type="color">
+                            <button id="a8" class="botonColor"></button>
+                            <input id="a9" class="aa color-inputs" type="color">
+                            <button id="a10" class="botonColor"></button>
+                            <input id="a11" class="aa color-inputs" type="color">
+                            <button id="a12" class="botonColor"></button>
+                            <input id="a13" class="aa color-inputs" type="color">
+                            <button id="a14" class="botonColor"></button>
+                            <input id="a15" class="aa color-inputs" type="color">
+                            <button id="a16" class="botonColor"></button>
+                            <input id="a17" class="aa color-inputs" type="color">
+                            <button id="a18" class="botonColor"></button>
+                            <input id="a19" class="aa color-inputs" type="color">
+                            <button id="a20" class="botonColor"></button>
+                            <input id="a21" class="aa color-inputs" type="color">
+                            <button id="a22" class="botonColor"></button>
+                            <input id="a23" class="aa color-inputs" type="color">
+                            <button id="a24" class="botonColor"></button>
+                            <button class="aa btn-color reset resetgrid">reset</button>
+                            <button class="aa btn-color save">save</button>
+                        </div>
+                    </section>                    
+                </aside>
+            </main>
+            <footer>
+                <div class="tema">theme</div>
+                <div class="github">github</div>
+                <div class="twitter">twitter</div>
+                <div class="linkedin">linkedin</div>
+                <div class="portfolio">portfolio</div>
+                <div class="esp">español</div>
+            </footer>
+        </div>
+        <script src="pixel.js"></script>
+    </body>
+</html>
